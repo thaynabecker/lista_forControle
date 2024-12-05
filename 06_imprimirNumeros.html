@@ -6,14 +6,25 @@
     */
 
     //ENTRADA
-    let numImpares = [];
-    let numPares = [];
-
+    const n1 = Number(prompt("Informe um número inicial:"));
+    const n2 = Number(prompt("Informe um número final:"));
+    let impares = [];
+    let pares = [];
+   
     //PROCESSAMENTO
-    for (let contador = 0; contador < ; contador++) {
-        
+    if (n1 < n2) {
+        for (let contador = n1 + 1; contador < n2; contador++) {
+        if (contador % 2 == 0) {
+            pares.push(contador);
+        } else {
+            impares.push(contador);
+        }
+        }
+    } else {
+        alert(`ERRO! Para verificar os números ímpares e pares que estão entre os dois números o número inicia deve ser menor que o número final.`);
     }
     
     //SAÍDA
-
+    alert(`Números pares entre ${n1} e ${n2}: ${pares.join(", ")}`);
+    alert(`Números ímpares entre ${n1} e ${n2}: ${impares.join(", ")}`);
 </script>
