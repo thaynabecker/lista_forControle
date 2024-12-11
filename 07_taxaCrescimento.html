@@ -6,12 +6,16 @@
     */
 
     //ENTRADA
-
+    let populacao = 80000;
+    const taxaCrescimento = 1.03; 
+    const populacaoObjetivo = 200000;
+    let anos;
+    
     //PROCESSAMENTO
-    for (contador = 0, populacao = 80000; populacao < 200000; contador++) {
-        populacao *= 1.03; 
+    for (anos = 0; populacao < populacaoObjetivo; anos++) {
+        populacao *= taxaCrescimento;
     }
 
     //SAÍDA
-    alert("Será necessário " + contador + " anos para que o número de habitantes atinja 200.000 habitantes.");
+    alert("Será necessário " + anos + " anos para que o número de habitantes atinja 200.000 habitantes.");
 </script>
